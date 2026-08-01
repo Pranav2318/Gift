@@ -62,8 +62,8 @@ function createHeart() {
 
     heart.innerHTML =
         Math.random() > 0.5
-            ? "❤️"
-            : "💗";
+            ? "🌸"
+            : "🌻";
 
 
     heart.style.left =
