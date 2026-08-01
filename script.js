@@ -10,12 +10,20 @@ const pages = document.querySelectorAll(".page");
 function showPage(index) {
 
     pages.forEach((page) => {
+
         page.classList.remove("active");
+
     });
+
 
     pages[index].classList.add("active");
 
-    // Scroll the new page back to the top
+
+    /*
+       When changing pages,
+       scroll the new page to the top.
+    */
+
     pages[index].scrollTop = 0;
 }
 
@@ -51,56 +59,102 @@ function restart() {
 
 
 // =========================
-// FLOATING HEARTS
+// FLOATING FLOWERS
 // =========================
 
-function createHeart() {
+const flowers = [
 
-    const heart = document.createElement("div");
+    "🌸",
+    "🌻"
 
-    heart.classList.add("heart");
-
-    heart.innerHTML =
-        Math.random() > 0.5
-            ? "🌸"
-            : "🌻";
+];
 
 
-    heart.style.left =
+function createFlower() {
+
+    const flower =
+        document.createElement("div");
+
+
+    flower.classList.add("flower");
+
+
+    /*
+       Randomly choose
+       🌸 or 🌻
+    */
+
+    flower.innerHTML =
+        flowers[
+            Math.floor(
+                Math.random() * flowers.length
+            )
+        ];
+
+
+    /*
+       Random horizontal position
+    */
+
+    flower.style.left =
         Math.random() * 100 + "%";
 
 
-    heart.style.fontSize =
-        (Math.random() * 20 + 15) + "px";
+    /*
+       Random size
+    */
+
+    flower.style.fontSize =
+        (Math.random() * 18 + 18) + "px";
 
 
-    heart.style.animationDuration =
-        (Math.random() * 5 + 5) + "s";
+    /*
+       Random floating speed
+    */
 
+    flower.style.animationDuration =
+        (Math.random() * 5 + 6) + "s";
+
+
+    /*
+       Add flower to background
+    */
 
     document
-        .querySelector(".hearts")
-        .appendChild(heart);
+        .querySelector(".flowers")
+        .appendChild(flower);
 
+
+    /*
+       Remove after animation
+    */
 
     setTimeout(() => {
 
-        heart.remove();
+        flower.remove();
 
-    }, 10000);
+    }, 12000);
 
 }
 
 
-// Create hearts
-setInterval(createHeart, 500);
+// Create flowers every 600ms
+
+setInterval(createFlower, 600);
 
 
-// Create a few hearts immediately
+// Create a few flowers immediately
+
 for (let i = 0; i < 5; i++) {
-    setTimeout(createHeart, i * 300);
+
+    setTimeout(
+        createFlower,
+        i * 300
+    );
+
 }
 
 
-// Make sure first page is visible
+// Show first page
+
 showPage(0);
