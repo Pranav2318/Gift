@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+
+    background: #fff0f5;
+
+    color: #4a2735;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.page {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(1.05);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    z-index: 2;
+
+    /* Important */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 30px 15px;
+}
+
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    width: 100%;
+    max-width: 750px;
+
+    padding: 30px;
+
+    margin: auto;
+}
+
+
+.small {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+h1 {
+    font-size: clamp(35px, 7vw, 70px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+h1 span {
+    color: #ff4f81;
+}
+
+
+.subtitle {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+.emoji {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: bounce 2s infinite;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    background: #ff4f81;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 79, 129, 0.3);
+
+    transition: 0.3s;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   AWARD
+========================= */
+
+.award {
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    margin: 25px auto;
+
+    max-width: 600px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.1);
+
+    border: 2px solid #ffb6c9;
+}
+
+
+.award h2 {
+    color: #ff4f81;
+
+    margin: 10px 0;
+
+    line-height: 1.4;
+}
+
+
+.award p {
+    line-height: 1.6;
+
+    margin: 10px 0;
+}
+
+
+/* =========================
+   BIG TEXT
+========================= */
+
+.big-text {
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    margin: 30px 0;
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories-content {
+    max-width: 1000px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+.gallery {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(140px, 1fr));
+
+    gap: 25px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 35px auto;
+}
+
+
+.photo {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+
+.photo:nth-child(1) {
+    transform: rotate(-5deg);
+}
+
+
+.photo:nth-child(2) {
+    transform: rotate(4deg);
+}
+
+
+.photo:nth-child(3) {
+    transform: rotate(-3deg);
+}
+
+
+.photo:nth-child(4) {
+    transform: rotate(5deg);
+}
+
+
+.photo:nth-child(5) {
+    transform: rotate(-4deg);
+}
+
+
+.photo:nth-child(6) {
+    transform: rotate(3deg);
+}
+
+
+.photo:nth-child(7) {
+    transform: rotate(-5deg);
+}
+
+
+.photo:nth-child(8) {
+    transform: rotate(4deg);
+}
+
+
+.photo:hover {
+    transform:
+        rotate(0deg)
+        scale(1.08);
+
+    z-index: 5;
+}
+
+
+.photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-content {
+    max-width: 800px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.message {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+.message p {
+    margin-bottom: 22px;
+}
+
+
+.message .love {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #ff4f81;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.heart {
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 20px;
+
+    animation:
+        floatUp linear forwards;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floatUp {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .gallery {
+        grid-template-columns:
+            repeat(2, minmax(130px, 1fr));
+
+        gap: 20px;
+
+        max-width: 500px;
+    }
+
+    .content {
+        padding: 25px 15px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        align-items: flex-start;
+
+        padding:
+            25px 12px 40px;
+    }
+
+
+    .content {
+        padding: 20px 10px;
+
+        margin: auto;
+    }
+
+
+    h1 {
+        font-size: clamp(32px, 10vw, 48px);
+    }
+
+
+    .emoji {
+        font-size: 55px;
+    }
+
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+
+    .big-text {
+        font-size: 19px;
+    }
+
+
+    .award {
+        padding: 20px 15px;
+    }
+
+
+    .award h2 {
+        font-size: 21px;
+    }
+
+
+    .gallery {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+
+        margin: 25px auto;
+    }
+
+
+    .photo {
+        padding: 6px;
+
+        border-radius: 12px;
+    }
+
+
+    .message {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .message .love {
+        font-size: 20px;
+    }
+
+
+    button {
+        padding: 13px 22px;
+
+        font-size: 15px;
+    }
+
+}
