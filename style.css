@@ -13,6 +13,7 @@ body {
 
 
 body {
+
     font-family: "Poppins", Arial, sans-serif;
 
     background: #fff0f5;
@@ -28,6 +29,7 @@ body {
 ========================= */
 
 .page {
+
     position: fixed;
 
     top: 0;
@@ -38,6 +40,7 @@ body {
     height: 100dvh;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -52,9 +55,15 @@ body {
         opacity 0.8s ease,
         transform 0.8s ease;
 
+    /*
+       IMPORTANT:
+       Content stays above flowers
+    */
     z-index: 2;
 
-    /* Important */
+    /*
+       Allows long content to scroll
+    */
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -63,7 +72,9 @@ body {
 
 
 .page.active {
+
     opacity: 1;
+
     visibility: visible;
 
     transform: scale(1);
@@ -75,7 +86,9 @@ body {
 ========================= */
 
 .content {
+
     width: 100%;
+
     max-width: 750px;
 
     padding: 30px;
@@ -85,6 +98,7 @@ body {
 
 
 .small {
+
     font-size: 20px;
 
     margin-bottom: 15px;
@@ -92,6 +106,7 @@ body {
 
 
 h1 {
+
     font-size: clamp(35px, 7vw, 70px);
 
     line-height: 1.1;
@@ -101,11 +116,13 @@ h1 {
 
 
 h1 span {
+
     color: #ff4f81;
 }
 
 
 .subtitle {
+
     font-size: 18px;
 
     line-height: 1.6;
@@ -115,6 +132,7 @@ h1 span {
 
 
 .emoji {
+
     font-size: 70px;
 
     margin-bottom: 20px;
@@ -124,10 +142,11 @@ h1 span {
 
 
 /* =========================
-   BUTTON
+   BUTTONS
 ========================= */
 
 button {
+
     border: none;
 
     padding: 15px 28px;
@@ -156,12 +175,67 @@ button {
 
 
 button:hover {
-    transform: translateY(-4px) scale(1.05);
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
 }
 
 
 button:active {
+
     transform: scale(0.96);
+}
+
+
+/* =========================
+   AUGUST 2 DATE CARD
+========================= */
+
+.date-card {
+
+    width: 95px;
+
+    height: 100px;
+
+    margin: 0 auto 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    border: 2px solid #ddd;
+}
+
+
+.date-month {
+
+    background: #ff4f81;
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    padding: 8px;
+}
+
+
+.date-day {
+
+    color: #222;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    padding-top: 5px;
 }
 
 
@@ -170,7 +244,9 @@ button:active {
 ========================= */
 
 .award {
-    background: rgba(255, 255, 255, 0.9);
+
+    background:
+        rgba(255, 255, 255, 0.9);
 
     padding: 30px;
 
@@ -183,11 +259,13 @@ button:active {
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.1);
 
-    border: 2px solid #ffb6c9;
+    border:
+        2px solid #ffb6c9;
 }
 
 
 .award h2 {
+
     color: #ff4f81;
 
     margin: 10px 0;
@@ -197,6 +275,7 @@ button:active {
 
 
 .award p {
+
     line-height: 1.6;
 
     margin: 10px 0;
@@ -208,6 +287,7 @@ button:active {
 ========================= */
 
 .big-text {
+
     font-size: 24px;
 
     line-height: 1.6;
@@ -221,14 +301,17 @@ button:active {
 ========================= */
 
 .memories-content {
+
     max-width: 1000px;
 
     padding-top: 40px;
+
     padding-bottom: 40px;
 }
 
 
 .gallery {
+
     width: 100%;
 
     display: grid;
@@ -247,6 +330,7 @@ button:active {
 
 
 .photo {
+
     width: 100%;
 
     aspect-ratio: 4 / 5;
@@ -266,40 +350,35 @@ button:active {
 }
 
 
+/* Photo rotations */
+
 .photo:nth-child(1) {
     transform: rotate(-5deg);
 }
-
 
 .photo:nth-child(2) {
     transform: rotate(4deg);
 }
 
-
 .photo:nth-child(3) {
     transform: rotate(-3deg);
 }
-
 
 .photo:nth-child(4) {
     transform: rotate(5deg);
 }
 
-
 .photo:nth-child(5) {
     transform: rotate(-4deg);
 }
-
 
 .photo:nth-child(6) {
     transform: rotate(3deg);
 }
 
-
 .photo:nth-child(7) {
     transform: rotate(-5deg);
 }
-
 
 .photo:nth-child(8) {
     transform: rotate(4deg);
@@ -307,6 +386,7 @@ button:active {
 
 
 .photo:hover {
+
     transform:
         rotate(0deg)
         scale(1.08);
@@ -316,9 +396,11 @@ button:active {
 
 
 .photo img {
+
     display: block;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -332,14 +414,17 @@ button:active {
 ========================= */
 
 .final-content {
+
     max-width: 800px;
 
     padding-top: 50px;
+
     padding-bottom: 50px;
 }
 
 
 .message {
+
     width: 100%;
 
     max-width: 700px;
@@ -355,11 +440,13 @@ button:active {
 
 
 .message p {
+
     margin-bottom: 22px;
 }
 
 
 .message .love {
+
     font-size: 24px;
 
     font-weight: bold;
@@ -371,10 +458,11 @@ button:active {
 
 
 /* =========================
-   FLOATING HEARTS
+   FLOATING FLOWERS
 ========================= */
 
-.hearts {
+.flowers {
+
     position: fixed;
 
     top: 0;
@@ -387,16 +475,21 @@ button:active {
 
     overflow: hidden;
 
+    /*
+       IMPORTANT:
+       Flowers stay BEHIND everything
+    */
     z-index: 1;
 }
 
 
-.heart {
+.flower {
+
     position: absolute;
 
-    bottom: -50px;
+    bottom: -60px;
 
-    font-size: 20px;
+    pointer-events: none;
 
     animation:
         floatUp linear forwards;
@@ -410,6 +503,7 @@ button:active {
 @keyframes floatUp {
 
     0% {
+
         transform:
             translateY(0)
             rotate(0deg);
@@ -417,13 +511,17 @@ button:active {
         opacity: 0;
     }
 
+
     20% {
-        opacity: 1;
+
+        opacity: 0.8;
     }
 
+
     100% {
+
         transform:
-            translateY(-110vh)
+            translateY(-115vh)
             rotate(360deg);
 
         opacity: 0;
@@ -435,11 +533,16 @@ button:active {
 
     0%,
     100% {
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 
+
     50% {
-        transform: translateY(-15px);
+
+        transform:
+            translateY(-15px);
     }
 }
 
@@ -451,6 +554,7 @@ button:active {
 @media (max-width: 800px) {
 
     .gallery {
+
         grid-template-columns:
             repeat(2, minmax(130px, 1fr));
 
@@ -459,7 +563,9 @@ button:active {
         max-width: 500px;
     }
 
+
     .content {
+
         padding: 25px 15px;
     }
 
@@ -473,6 +579,7 @@ button:active {
 @media (max-width: 600px) {
 
     .page {
+
         align-items: flex-start;
 
         padding:
@@ -481,6 +588,7 @@ button:active {
 
 
     .content {
+
         padding: 20px 10px;
 
         margin: auto;
@@ -488,36 +596,64 @@ button:active {
 
 
     h1 {
-        font-size: clamp(32px, 10vw, 48px);
+
+        font-size:
+            clamp(32px, 10vw, 48px);
     }
 
 
     .emoji {
+
         font-size: 55px;
     }
 
 
     .subtitle {
+
         font-size: 16px;
     }
 
 
     .big-text {
+
         font-size: 19px;
     }
 
 
     .award {
+
         padding: 20px 15px;
     }
 
 
     .award h2 {
+
         font-size: 21px;
     }
 
 
+    .date-card {
+
+        width: 85px;
+
+        height: 90px;
+    }
+
+
+    .date-month {
+
+        font-size: 17px;
+    }
+
+
+    .date-day {
+
+        font-size: 35px;
+    }
+
+
     .gallery {
+
         grid-template-columns:
             repeat(2, 1fr);
 
@@ -528,6 +664,7 @@ button:active {
 
 
     .photo {
+
         padding: 6px;
 
         border-radius: 12px;
@@ -535,6 +672,7 @@ button:active {
 
 
     .message {
+
         font-size: 16px;
 
         line-height: 1.7;
@@ -542,11 +680,13 @@ button:active {
 
 
     .message .love {
+
         font-size: 20px;
     }
 
 
     button {
+
         padding: 13px 22px;
 
         font-size: 15px;
